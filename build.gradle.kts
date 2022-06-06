@@ -47,5 +47,5 @@ val jar by tasks.getting(Jar::class) {
 }
 
 springBoot {
-	mainClass.set("com.pluralsight.conferencedemo.ConferenceDemoApplication")
+	mainClass.set("com.pluralsight.conferencedemo.ConferenceDemoApplicationKt")
 }
