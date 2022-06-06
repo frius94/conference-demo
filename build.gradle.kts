@@ -42,6 +42,10 @@ tasks.withType<Test> {
 
 val jar by tasks.getting(Jar::class) {
 	manifest {
-		attributes["Main-Class"] = "com.pluralsight.conferencedemo.ConferenceDemoApplication"
+		attributes["Main-Class"] = "com.pluralsight.conferencedemo.ConferenceDemoApplicationKt"
 	}
+}
+
+springBoot {
+	mainClass.set("com.pluralsight.conferencedemo.ConferenceDemoApplicationKt")
 }
