@@ -22,7 +22,7 @@ class SessionsController {
     @GetMapping
     @RequestMapping("{id}")
     fun get(@PathVariable id: Long): Session {
-        return sessionRepository.getById(id)
+        return sessionRepository.getReferenceById(id)
     }
 
     @PostMapping
@@ -39,8 +39,38 @@ class SessionsController {
 
     @RequestMapping(value = ["{id}"], method = [RequestMethod.PUT])
     fun update(@PathVariable id: Long, @RequestBody session: Session): Session {
-        val existingSession = sessionRepository.getById(id)
+        val existingSession = sessionRepository.getReferenceById(id)
         BeanUtils.copyProperties(session, existingSession, "session_id")
         return sessionRepository.saveAndFlush(existingSession)
     }
+
+//    http://localhost:8080/api/v1/sessions/name?name=access
+//    @GetMapping
+//    @RequestMapping("name")
+//    fun getByName(@RequestParam name: String): Session {
+//        return sessionRepository.getReferenceById(2)
+////        return sessionRepository.findByName(name)
+//    }
+
+//    http://localhost:8080/api/v1/sessions/name/name
+//    @GetMapping
+//    @RequestMapping("name/{name}")
+//    fun getByName(@PathVariable name: String): Session {
+//        return sessionRepository.findByName(name)
+//    }
+
+//    ----------------------------------------------------------
+
+//        http://localhost:8080/api/v1/sessions/?name=spring
+    @GetMapping
+    @RequestMapping(value = ["/"], params = ["name"])
+    fun getByName(@RequestParam("name") name : String): List<Session> {
+    return sessionRepository.findByName(name)
+    }
+
+//    @RequestMapping(value="/hello" params= param1)
+//    public returnType method(@RequestParam("param1") p) { ... }
+//
+//    @RequestMapping(value="/hello" params= param2)
+//    public differentreturnType method2(@RequestParam("param2") p) { ... }
 }
