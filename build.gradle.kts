@@ -40,11 +40,11 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 
-//val jar by tasks.getting(Jar::class) {
-//	manifest {
-//		attributes["Main-Class"] = "com.pluralsight.conferencedemo.ConferenceDemoApplication"
-//	}
-//}
+val jar by tasks.getting(Jar::class) {
+	manifest {
+		attributes["Main-Class"] = "com.pluralsight.conferencedemo.ConferenceDemoApplication"
+	}
+}
 
 springBoot {
 	mainClass.set("com.pluralsight.conferencedemo.ConferenceDemoApplicationKt")
