@@ -1,0 +1,897 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+paths:
+  /api/v1/speakers/{id}:
+    get:
+      tags:
+      - speakers-controller
+      operationId: get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Speaker'
+    put:
+      tags:
+      - speakers-controller
+      operationId: update_2
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Speaker'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Speaker'
+    post:
+      tags:
+      - speakers-controller
+      operationId: get_3
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Speaker'
+    delete:
+      tags:
+      - speakers-controller
+      operationId: delete_2
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Speaker'
+    options:
+      tags:
+      - speakers-controller
+      operationId: get_2
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Speaker'
+    head:
+      tags:
+      - speakers-controller
+      operationId: get_4
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Speaker'
+    patch:
+      tags:
+      - speakers-controller
+      operationId: get_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Speaker'
+  /api/v1/sessions/{id}:
+    get:
+      tags:
+      - sessions-controller
+      operationId: get_5
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Session'
+    put:
+      tags:
+      - sessions-controller
+      operationId: update_1_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Session'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Session'
+    post:
+      tags:
+      - sessions-controller
+      operationId: get_8
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Session'
+    delete:
+      tags:
+      - sessions-controller
+      operationId: delete_1_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Session'
+    options:
+      tags:
+      - sessions-controller
+      operationId: get_7
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Session'
+    head:
+      tags:
+      - sessions-controller
+      operationId: get_9
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Session'
+    patch:
+      tags:
+      - sessions-controller
+      operationId: get_6
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Session'
+  /api/v1/speakers:
+    get:
+      tags:
+      - speakers-controller
+      operationId: list_2_1_1_1_1
+      parameters:
+      - name: title
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: lastname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: firstname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: company
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Speaker'
+    put:
+      tags:
+      - speakers-controller
+      operationId: getByTitle_3_1_1_1_1
+      parameters:
+      - name: title
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: lastname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: firstname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: company
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Speaker'
+    post:
+      tags:
+      - speakers-controller
+      operationId: create_2_1_1_1_1
+      parameters:
+      - name: title
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: lastname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: firstname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: company
+        in: query
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Speaker'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Speaker'
+    delete:
+      tags:
+      - speakers-controller
+      operationId: getByTitle_5_1_1_1
+      parameters:
+      - name: title
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: lastname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: firstname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: company
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Speaker'
+    options:
+      tags:
+      - speakers-controller
+      operationId: getByTitle_2_1_1_1_1
+      parameters:
+      - name: title
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: lastname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: firstname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: company
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Speaker'
+    head:
+      tags:
+      - speakers-controller
+      operationId: getByTitle_4_1_1_1_1
+      parameters:
+      - name: title
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: lastname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: firstname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: company
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Speaker'
+    patch:
+      tags:
+      - speakers-controller
+      operationId: getByTitle_1_1_1_1_1
+      parameters:
+      - name: title
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: lastname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: firstname
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: company
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Speaker'
+  /api/v1/sessions:
+    get:
+      tags:
+      - sessions-controller
+      operationId: list_1
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+    post:
+      tags:
+      - sessions-controller
+      operationId: create_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Session'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Session'
+  /sendManual:
+    get:
+      tags:
+      - home-controller
+      operationId: sendManual
+      parameters:
+      - name: message
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /sendAuto:
+    get:
+      tags:
+      - home-controller
+      operationId: sendAuto
+      parameters:
+      - name: message
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /receive:
+    get:
+      tags:
+      - home-controller
+      operationId: recv
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /api/v1/sessions/:
+    get:
+      tags:
+      - sessions-controller
+      operationId: getByName
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+    put:
+      tags:
+      - sessions-controller
+      operationId: getByName_5
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+    post:
+      tags:
+      - sessions-controller
+      operationId: getByName_4
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+    delete:
+      tags:
+      - sessions-controller
+      operationId: getByName_1
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+    options:
+      tags:
+      - sessions-controller
+      operationId: getByName_3
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+    head:
+      tags:
+      - sessions-controller
+      operationId: getByName_6
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+    patch:
+      tags:
+      - sessions-controller
+      operationId: getByName_2
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+  /:
+    get:
+      tags:
+      - home-controller
+      operationId: getStatus
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+    put:
+      tags:
+      - home-controller
+      operationId: getStatus_5
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+    post:
+      tags:
+      - home-controller
+      operationId: getStatus_4
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+    delete:
+      tags:
+      - home-controller
+      operationId: getStatus_1
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+    options:
+      tags:
+      - home-controller
+      operationId: getStatus_3
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+    head:
+      tags:
+      - home-controller
+      operationId: getStatus_6
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+    patch:
+      tags:
+      - home-controller
+      operationId: getStatus_2
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+components:
+  schemas:
+    Speaker:
+      type: object
+      properties:
+        speaker_id:
+          type: integer
+          format: int64
+        first_name:
+          type: string
+        last_name:
+          type: string
+        title:
+          type: string
+        company:
+          type: string
+        speaker_bio:
+          type: string
+        speaker_photo:
+          type: array
+          items:
+            type: string
+            format: byte
+    Session:
+      type: object
+      properties:
+        session_id:
+          type: integer
+          format: int64
+        session_name:
+          type: string
+        session_description:
+          type: string
+        session_length:
+          type: integer
+          format: int32
+        speakers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Speaker'
